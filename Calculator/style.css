@@ -1,0 +1,117 @@
+/* Code written by Yoshit Mani on 08/07/2024 */
+body {
+  background-color: #e3f9ff;
+  padding: 10px;  /*padding value in px*/
+  display: flex;  /*padding value in px*/
+  justify-content: center;
+}
+
+.case {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 390px;
+  height: 700px;
+  border: 0px solid black;
+  border-radius: 0px;
+}
+
+/*screen*/
+.screen {
+  background-color:white;
+  width: 380px;
+  height: 687px;
+  padding: 10px;
+  padding-top: 3px;
+  border: 6px solid black;
+  border-radius: 12px;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+/*Display*/
+.display-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.display {
+  width: calc(100% - 10px);
+  max-width: 370px;
+  height: 140px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+
+/*special btns*/
+.special-btns {
+  background-color: #FBFBFB;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 60px;
+  padding-right: 30px;
+}
+
+.backspace-btn {
+  background-color: white;
+  width: 30px;
+  align-content: center;
+  justify-content: center;
+}
+
+.backspace-icon {
+  width: 100%;
+}
+
+/*btn grid*/
+.btn-grid {
+  width: 100%;
+  display: grid;
+  padding-top: 20px;
+  place-items: center center;
+  border-top: 3px solid rgb(10, 10, 10);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 10%;
+  background-color: rgb(17, 17, 17);
+  color:white;
+  margin: 10px;
+  border: 0;
+  font-size: 28px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.c-btn {
+  color: red;
+}
+
+.greentext {
+  color: #33ffd8;
+}
+
+.equal-btn {
+  background-color: black;
+  color: white;
+  width: calc(70px * 2 + 20px);  /* Double the width plus the margin */
+  height: 70px;
+  grid-column: span 2;  /* Span two columns */
+  border-radius: 10%;  /* Match other buttons */
+}

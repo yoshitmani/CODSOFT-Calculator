@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="case">
+    <div class="screen">
+  
+      <div class="display-wrapper">
+        <div class="display"></div>
+      </div>
+
+      <div class="special-btns">
+        <div class="backspace-btn" onclick="
+            calculation = calculation.slice(0,-1);
+            display.innerHTML = calculation;">
+          <img class="backspace-btn" src="icons/image.png">
+        </div>
+      </div>
+
+
+      <div class="btn-grid">
+        <!-- [/] [()] [%] [C] -->
+        <button class="btn greentext" onclick="updateCalculation(' / ');">÷</button>
+        
+        <button class="btn greentext" onclick="handleParenthesis()">( )</button>
+
+        <button class="btn greentext" onclick="calculation /=100;display.innerHTML = calculation;">%</button>
+        
+        <button class="btn c-btn" onclick="
+        calculation=''
+        display.innerHTML = '';
+        localStorage.clear();
+        stack = []
+        ">C</button>
+        
+
+        <!-- [7] [8] [9] [*]-->
+
+        <button class="btn" onclick="
+        updateCalculation('7');
+        ">7</button>
+
+        <button class="btn" onclick="
+        updateCalculation('8');
+        ">8</button>
+
+        <button class="btn" onclick="
+        updateCalculation('9');
+        ">9</button>
+
+        <button class="btn greentext" onclick="
+        updateCalculation('*');
+        ">x</button>
+
+        <!-- [4] [5] [6] [-] -->
+
+        <button class="btn" onclick="
+        updateCalculation('4');
+        ">4</button>
+
+        <button class="btn" onclick="updateCalculation('5');">5</button>
+
+        <button class="btn" onclick="updateCalculation('6');">6</button>
+
+        <button class="btn greentext" onclick="updateCalculation('-');">-</button>
+
+        <!-- [1] [2] [3] [+] -->
+
+        <button class="btn" onclick="
+        updateCalculation('1');
+        ">1</button>
+
+        <button class="btn" onclick="
+        updateCalculation('2');
+        ">2</button>
+
+        <button class="btn" onclick="
+        updateCalculation('3');
+        ">3</button>
+
+        <button class="btn  greentext" onclick="
+        updateCalculation('+');
+        ">+</button>
+
+        <!-- [+/-] [0] [.] [=] -->
+       
+
+        <button class="btn" onclick="
+        updateCalculation('0');
+        ">0</button>
+
+        <button class="btn" onclick="
+        updateCalculation('.');
+        ">.</button>
+
+        <button class="btn equal-btn" onclick="handleEquals()">=</button>
+
+      </div>
+
+
+    </div>
+
+  </div>
+  <script src='script.js'></script>
+</body>
+
+</html>
